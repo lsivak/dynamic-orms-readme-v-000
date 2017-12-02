@@ -11,9 +11,9 @@ song.save
 
 DB[:conn].execute("SELECT * FROM songs")
 if song.song_by_name("Goodbye")
-puts "You're song information has been located"
-DB[:conn].execute("SELECT * FROM songs")
+  puts "You're song information has been located"
+  DB[:conn].execute("SELECT * FROM songs")
 else
-puts "I'm sorry, we can't locate that song"
-binding "pry"
+  puts "I'm sorry, we can't locate that song"
+binding.pry
 end
