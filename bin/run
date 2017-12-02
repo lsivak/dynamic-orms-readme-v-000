@@ -10,3 +10,10 @@ puts "song album: " + song.album
 song.save
 
 DB[:conn].execute("SELECT * FROM songs")
+if song.song_by_name("Goodbye")
+puts "You're song information has been located"
+DB[:conn].execute("SELECT * FROM songs")
+else 
+puts "I'm sorry, we can't locate that song"
+end
+
